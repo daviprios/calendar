@@ -1,0 +1,12 @@
+.calendar-grid{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  width: fit-content;
+  height: fit-content;
+
+  padding: 5px;
+
+  border: tomato;
+  border-style: solid;
+  border-width: 1px;
+} 

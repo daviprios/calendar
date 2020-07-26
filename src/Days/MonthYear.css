@@ -1,0 +1,39 @@
+.form-container{
+  border: solid;
+  border-color: lightcoral;
+  border-width: 1px;
+
+  height: fit-content;
+}
+
+.form-grid{
+  display: grid;
+  margin: auto 4%;
+  padding: 5px 0;
+  grid-template-columns: 17% 25% 13% 25% 12%;
+  grid-template-rows: auto;
+}
+
+input{
+  width: 50px;
+}
+
+.label{
+  font-size: 12px;
+}
+
+.input{
+  font-size: 12px;
+  width: 40px;
+}
+
+.button, .button:focus{
+  background-color: lightcyan;
+  border: solid;
+  border-width: 1px;
+  border-color: gray;
+  border-radius: 3px;
+
+  width: auto;
+  height: auto;
+}
