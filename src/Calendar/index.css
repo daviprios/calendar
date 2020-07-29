@@ -1,7 +1,10 @@
 .container{
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 257px;
+  grid-template-rows: auto auto auto auto;
+
+  position: relative;
+  top: 10vh;
 }
 
 .top-container{
@@ -28,4 +31,22 @@
 
 .calendar-grid{
   border-style: none;
+}
+
+.reminder-block{
+  margin-top: 3px;
+}
+
+.reminder-text{
+  margin-bottom: 10px;
+}
+
+.reminder-title{
+  font-size: 14px;
+}
+
+.reminder-tip{
+  font-size: 10px;
+  color: gray;
+  margin-bottom: 100px;
 }

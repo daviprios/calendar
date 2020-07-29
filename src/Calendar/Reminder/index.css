@@ -1,0 +1,38 @@
+.datereminder-container{
+  width: auto;
+  height: 30px;
+
+  display: grid;
+  grid-template-columns: auto max-content max-content;
+  grid-template-rows: max-content;
+}
+
+.date-name{
+  font-size: 14px;
+}
+
+.remove, .goto{
+  margin-left: 10px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.remove{
+  background-color: red;
+  color: white;
+}
+
+.remove:active{
+  background-color: whitesmoke;
+  color: red;
+}
+
+.goto{
+  background-color: lightblue;
+  color: black;
+}
+
+.goto:active{
+  background-color: gray;
+  color: white;
+}

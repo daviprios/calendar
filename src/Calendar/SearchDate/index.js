@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './MonthYear.css';
+import './index.css';
 
 export default class MonthYearSearch extends Component {
   constructor(props){
@@ -14,8 +14,11 @@ export default class MonthYearSearch extends Component {
   }
 
   Verify(event){
-    if(this.state.month > 12 || this.state.month < 1 || this.state.year === 0)
+    if(this.state.month > 12 || this.state.month < 1 || this.state.year === 0 || this.state.year < 100){
+      alert("Invalid Date\nAccepts only date between 1-12/100-9999");
+      event.preventDefault();
       return;
+    }
     this.props.changeDate(this.state.month, this.state.year);
     event.preventDefault();
   }
