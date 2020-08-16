@@ -20,9 +20,9 @@ export default class Days extends Component {
     this.setState({ monthDays: this.CheckDate(this.props.month, this.props.year),
       currentFirstDay: this.GetWeekDay(1, this.props.month, this.props.year),
     },
-    () => this.setState({ offset: this.Offset(this.state.currentFirstDay),
-      days: this.Present(this.state.monthDays),
-      restset: this.OffsetRight(this.state.monthDays, this.state.currentFirstDay) })
+    () => this.setState({ offset: this.GetOffset(this.state.currentFirstDay),
+      days: this.GetPresent(this.state.monthDays),
+      restset: this.GetOffsetRight(this.state.monthDays, this.state.currentFirstDay) })
     );
   }
 
@@ -31,9 +31,9 @@ export default class Days extends Component {
       this.setState({ monthDays: this.CheckDate(this.props.month, this.props.year),
         currentFirstDay: this.GetWeekDay(1, this.props.month, this.props.year),
       },
-      () => this.setState({ offset: this.Offset(this.state.currentFirstDay),
-        days: this.Present(this.state.monthDays),
-        restset: this.OffsetRight(this.state.monthDays, this.state.currentFirstDay) })
+      () => this.setState({ offset: this.GetOffset(this.state.currentFirstDay),
+        days: this.GetPresent(this.state.monthDays),
+        restset: this.GetOffsetRight(this.state.monthDays, this.state.currentFirstDay) })
       );  
     }
   }
@@ -138,7 +138,7 @@ export default class Days extends Component {
     return weekDay;
   }
 
-  Offset(dayweek){
+  GetOffset(dayweek){
     let offset = [];
     for (let x = 0; x < dayweek; x++) {
       offset.push(x);
@@ -146,7 +146,7 @@ export default class Days extends Component {
     return offset;
   }
 
-  Present(monthdays){
+  GetPresent(monthdays){
     let days = [];
     for (let x = 1; x <= monthdays; x++) {
       days.push(x);
@@ -154,7 +154,7 @@ export default class Days extends Component {
     return days;
   }
 
-  OffsetRight(monthdays, dayweek){
+  GetOffsetRight(monthdays, dayweek){
     let offset = 0;
     let comparison = monthdays + dayweek;
 

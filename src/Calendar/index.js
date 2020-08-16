@@ -39,7 +39,7 @@ export default class Calendar extends Component {
     this.setState({ remindDates });
   }
 
-  MonthName(){
+  GetMonthName(){
     return this.state.monthNames[this.state.month];
   }
 
@@ -70,7 +70,7 @@ export default class Calendar extends Component {
         <div className="top-container">
           <span className="material-icons button-month-left" onClick={() => this.ChangeDate(false)} >keyboard_arrow_left</span>
           <div className="date">
-            <span className="month" >{this.MonthName()} - </span>
+            <span className="month" >{this.GetMonthName()} - </span>
             <span className="year" >{this.state.year}</span>
           </div>
           <span className="material-icons button-month-right" onClick={() => this.ChangeDate(true)} >keyboard_arrow_right</span>
